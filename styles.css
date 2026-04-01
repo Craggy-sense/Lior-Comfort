@@ -429,6 +429,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; color: var(--te
 }
 
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
 
 
 .feature-item.vertical {
