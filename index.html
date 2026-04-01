@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIOR | Executive Safari & Premium Shuttle Service</title>
+    <meta name="description" content="Kenya's dedicated exploration partner. Premium safari tours and executive shuttle services with luxury Toyota Voxy hybrids.">
+    
+    <!-- Google Fonts for Modern Luxury -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Prata&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- WhatsApp Floating Action -->
+    <a href="https://wa.me/254700000000" class="whatsapp-btn fixed-btn" target="_blank" aria-label="WhatsApp Support">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+    </a>
+    <style>
+        .fixed-btn {
+            position: fixed; bottom: 30px; right: 30px; z-index: 999;
+            width: 60px; height: 60px; border-radius: 50%;
+            background: #25D366; color: white;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transition: transform 0.3s ease;
+        }
+        .fixed-btn:hover { transform: translateY(-4px) scale(1.05); }
+    </style>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container container">
+            <a href="#" class="logo">
+                <span class="logo-icon">✥</span>
+                <span class="logo-text">LIOR</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Toggle navigation" id="mobile-toggle">
+                ☰
+            </button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#travel">Travel</a></li>
+                <li><a href="#fleet">Voxy Fleet</a></li>
+                <li><a href="#shuttle">Shuttle</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="nav-btn-link">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Epic Centered Hero -->
+    <section id="home" class="hero epic-hero">
+        <div class="container hero-content text-center reveal-up">
+            <span class="hero-tag-wide">KENYA'S PREMIER LUXURY TRAVEL & EXECUTIVE SHUTTLE SERVICE</span>
+            
+            <h1 class="hero-giant-title serif">LIOR</h1>
+            <h2 class="hero-script">Travel & Exploration</h2>
+            
+            <span class="hero-tag-wide hero-subtag">LUXURY TRAVEL & EXECUTIVE SHUTTLE ACROSS KENYA</span>
+            
+            <div class="hero-actions">
+                <a href="#explore" class="btn-text-link">Explore Destinations &rarr;</a>
+                <a href="#contact" class="btn-pill-white">Book Shuttle</a>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span>SCROLL</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Glass Stats -->
+    <div class="container hero-stats-wrapper reveal-up">
+        <div class="glass-panel stats-glass-grid">
+            <div class="stat-item">
+                <span class="stat-number counters" data-target="50">0</span>
+                <span class="stat-label">Destinations</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number counters" data-target="1500">0</span>
+                <span class="stat-label">Happy Guests</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number counters" data-target="10">0</span>
+                <span class="stat-label">Years of Magic</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Travel Destinations -->
+    <section id="destinations" class="section-padding" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="hero-tag" style="margin-bottom: 8px;">EXPLORE KENYA</span>
+                <h2 class="serif">Breathtaking Destinations</h2>
+                <p>From the iconic savannas to the pristine coastal shores, travel to Kenya's most sought-after locations in unrivaled luxury.</p>
+            </div>
+            
+            <div class="destinations-grid">
+                <!-- Maasai Mara -->
+                <div class="destination-card reveal-up">
+                    <div class="card-image-wrap">
+                        <img src="assets/dest-mara.png" alt="Maasai Mara Safari">
+                        <span class="card-overlay-tag">Wildlife & Safari</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header-flex">
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                Narok County, Kenya
+                            </div>
+                            <div class="card-price">From KSh 12,000/person</div>
+                        </div>
+                        <h3 class="serif card-title">Maasai Mara Safari</h3>
+                        <div class="card-meta">
+                            <span>3–7 Days</span>
+                            <span>Guided Safari</span>
+                        </div>
+                        <p class="card-desc">Witness the Greatest Show on Earth — the wildebeest migration across the Mara River. Track the Big Five, sleep under canvas in luxury tented camps, and experience Kenya's most iconic wildlife destination.</p>
+                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                    </div>
+                </div>
+                <!-- Amboseli -->
+                <div class="destination-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="card-image-wrap">
+                        <img src="assets/dest-amboseli.png" alt="Amboseli Explorer">
+                        <span class="card-overlay-tag">Wildlife & Photography</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header-flex">
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                Kajiado County, Kenya
+                            </div>
+                            <div class="card-price">From KSh 10,000/person</div>
+                        </div>
+                        <h3 class="serif card-title">Amboseli Explorer</h3>
+                        <div class="card-meta">
+                            <span>2–5 Days</span>
+                            <span>Guided Safari</span>
+                        </div>
+                        <p class="card-desc">Kenya's most photogenic park. Elephant herds in the foreground, the snow-capped peak of Kilimanjaro behind — Amboseli delivers breathtaking scenery and intimate wildlife encounters unlike anywhere else.</p>
+                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                    </div>
+                </div>
+                <!-- Diani Beach -->
+                <div class="destination-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="card-image-wrap">
+                        <img src="assets/dest-diani.png" alt="Diani Beach Escape">
+                        <span class="card-overlay-tag">Beach & Coastal Paradise</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header-flex">
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                South Coast, Mombasa
+                            </div>
+                            <div class="card-price">From KSh 8,500/person</div>
+                        </div>
+                        <h3 class="serif card-title">Diani Beach Escape</h3>
+                        <div class="card-meta">
+                            <span>3–10 Days</span>
+                            <span>Resort & Leisure</span>
+                        </div>
+                        <p class="card-desc">Powder-white sands, warm turquoise Indian Ocean waters, and swaying palms line Kenya's most beautiful beach. Perfect for couples, families, and anyone seeking sun-soaked coastal paradise relaxation.</p>
+                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                    </div>
+                </div>
+                
+                <!-- Mount Kenya -->
+                <div class="destination-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1518182170546-076616fd44e4?auto=format&fit=crop&w=800&q=80" alt="Mount Kenya Trek">
+                        <span class="card-overlay-tag">Adventure & Trekking</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header-flex">
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                Central Kenya
+                            </div>
+                            <div class="card-price">From KSh 9,000/person</div>
+                        </div>
+                        <h3 class="serif card-title">Mount Kenya Trek</h3>
+                        <div class="card-meta">
+                            <span>4–7 Days</span>
+                            <span>Guided Trek</span>
+                        </div>
+                        <p class="card-desc">Scale Africa's second-highest peak through dramatic moorlands, glacial valleys, and alpine meadows. Whether you summit Point Lenana or explore the forest foothills, Mount Kenya is an adventure of a lifetime.</p>
+                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                    </div>
+                </div>
+                
+                <!-- Lake Nakuru & Flamingos -->
+                <div class="destination-card reveal-up" style="transition-delay: 0.4s;">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1547087679-05244be25ef8?auto=format&fit=crop&w=800&q=80" alt="Lake Nakuru Flamingos">
+                        <span class="card-overlay-tag">Birds & Wildlife</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header-flex">
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                Nakuru County, Kenya
+                            </div>
+                            <div class="card-price">From KSh 7,500/person</div>
+                        </div>
+                        <h3 class="serif card-title">Lake Nakuru & Flamingos</h3>
+                        <div class="card-meta">
+                            <span>1–3 Days</span>
+                            <span>Day Trip Available</span>
+                        </div>
+                        <p class="card-desc">A flamingo-fringed alkaline lake that turns pink at the horizon. Spot rhinos, lions, and baboons in one of Kenya's most diverse parks, just two hours from Nairobi. The perfect weekend escape.</p>
+                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                    </div>
+                </div>
+                
+                <!-- Lamu Island Retreat -->
+                <div class="destination-card reveal-up" style="transition-delay: 0.5s;">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1580983533816-724fbcdad134?auto=format&fit=crop&w=800&q=80" alt="Lamu Island Retreat">
+                        <span class="card-overlay-tag">Heritage & Island Living</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-header-flex">
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                Lamu Archipelago, Kenya
+                            </div>
+                            <div class="card-price">From KSh 15,000/person</div>
+                        </div>
+                        <h3 class="serif card-title">Lamu Island Retreat</h3>
+                        <div class="card-meta">
+                            <span>4–8 Days</span>
+                            <span>Cultural & Leisure</span>
+                        </div>
+                        <p class="card-desc">Step back in time on this UNESCO World Heritage island. Narrow coral-stone streets, traditional dhow cruises, pristine beaches, and Swahili culture make Lamu Kenya's most enchanting and authentic escape.</p>
+                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="destination-cta reveal-up" style="margin-top: 60px; text-align: center; padding: 40px; background: #FFFFFF; border-radius: var(--radius-lg); border: 1px solid var(--border-glass);">
+                <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 15px;">Looking For A Custom Itinerary?</h3>
+                <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 1.05rem;">Don't see your dream destination? Reach out to us and we'll design a bespoke luxury journey just for you.</p>
+                <a href="#contact" class="btn-pill-white" style="border: 1px solid var(--text-pure); box-shadow: none;">Design Your Journey &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Lior - Services -->
+    <section id="explore" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="hero-tag" style="margin-bottom: 8px;">THE LIOR STANDARD</span>
+                <h2 class="serif">Crafting Perfect Journeys</h2>
+                <p>We believe every mile should be enjoyed, not just endured. Whether it's an airport transfer or a multi-day safari, we ensure excellence.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="glass-panel service-card reveal-up">
+                    <div class="service-icon">✦</div>
+                    <h3 class="serif">Private Safari Drives</h3>
+                    <p>Access absolute wilderness without compromising on luxury. Our vetted guides navigate the terrain while you relax in our custom hybrid fleet.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="glass-panel service-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="service-icon">✈</div>
+                    <h3 class="serif">Executive Transfer</h3>
+                    <p>Reliable, punctual shuttles to and from JKIA. Step off your flight and straight into a serene, air-conditioned cabin that feels like an executive lounge.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="glass-panel service-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="service-icon">❖</div>
+                    <h3 class="serif">Corporate Transport</h3>
+                    <p>First impressions matter. We handle group logistics, VIP transport, and multiday corporate retreats with unmatched professionalism.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Voxy Fleet Showcase -->
+    <section id="fleet" class="section-padding" style="background: #FFFFFF; position: relative; overflow: hidden;">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="hero-tag">HYBRID EFFICIENCY</span>
+                <h2 class="serif" style="font-size: 2.8rem;">The Voxy Comfort Standard</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 15px auto 0;">
+                    Experience the pinnacle of hybrid performance and VIP comfort. Our unmarked Voxy fleet offers absolute privacy and zero road noise, allowing you to relax truly.
+                </p>
+            </div>
+            
+            <div class="fleet-gallery-grid">
+                <div class="fleet-image-wrap reveal-up">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="White Executive Voxy Exterior" style="object-fit: cover; height: 100%; aspect-ratio: 4/3;">
+                    <div class="image-label">Exterior Elegance</div>
+                </div>
+                
+                <div class="fleet-image-wrap reveal-up" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1616423641405-1a8047ce562d?auto=format&fit=crop&w=800&q=80" alt="Luxury VIP Captains Chairs Interior" style="object-fit: cover; height: 100%; aspect-ratio: 4/3;">
+                    <div class="image-label">Premium VIP Comfort</div>
+                </div>
+            </div>
+
+            <div class="fleet-features grid-3 reveal-up" style="margin-top: 60px;">
+                <div class="feature-item vertical">
+                    <span class="feature-icon">👑</span>
+                    <div class="feature-text text-center">
+                        <h4 class="serif">VIP Captain's Chairs</h4>
+                        <p>Sink into ultra-plush, reclining leather seating with expansive legroom designed specifically for executive relaxation.</p>
+                    </div>
+                </div>
+                <div class="feature-item vertical">
+                    <span class="feature-icon">🤫</span>
+                    <div class="feature-text text-center">
+                        <h4 class="serif">Supreme Cabin Silence</h4>
+                        <p>Our hybrid engine and acoustic glass create a whisper-quiet sanctuary away from the chaotic city exterior.</p>
+                    </div>
+                </div>
+                <div class="feature-item vertical">
+                    <span class="feature-icon">🛡</span>
+                    <div class="feature-text text-center">
+                        <h4 class="serif">Discrete Luxury</h4>
+                        <p>Unmarked, flawless exteriors offer ultimate privacy, ensuring a distinguished, clean, and totally secure arrival.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Mode CTA -->
+    <section id="contact" class="cta-section">
+        <div class="cta-bg"></div>
+        <div class="container reveal-up">
+            <span class="hero-tag">KARIBU KENYA</span>
+            <h2 class="serif">Your Safari Awaits</h2>
+            <p>From the moment you contact us, your journey begins. Let our executive team draft the perfect itinerary or schedule your next airport transfer.</p>
+            <div class="cta-buttons">
+                <a href="mailto:booking@liorcomfort.co.ke" class="btn-primary">Email Bookings</a>
+                <a href="tel:+254700000000" class="btn-glass">Call +254 700 000 000</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="justify-content: center; margin-bottom: 24px;">
+                <span class="logo-icon">✥</span>
+                <span class="logo-text">LIOR COMFORT</span>
+            </div>
+            <p>&copy; 2026 LIOR Kenya. Redefining Corporate Safari. 🇰🇪</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
