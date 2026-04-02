@@ -16,22 +16,11 @@
 <body>
 
     <!-- WhatsApp Floating Action -->
-    <a href="https://wa.me/254700000000" class="whatsapp-btn fixed-btn" target="_blank" aria-label="WhatsApp Support">
+    <a href="https://wa.me/254700000000" class="whatsapp-btn fixed-btn" target="_blank" rel="noopener" aria-label="WhatsApp Support">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
           <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
         </svg>
     </a>
-    <style>
-        .fixed-btn {
-            position: fixed; bottom: 30px; right: 30px; z-index: 999;
-            width: 60px; height: 60px; border-radius: 50%;
-            background: #25D366; color: white;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-            transition: transform 0.3s ease;
-        }
-        .fixed-btn:hover { transform: translateY(-4px) scale(1.05); }
-    </style>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -47,11 +36,11 @@
             
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#travel">Travel</a></li>
-                <li><a href="#fleet">Voxy Fleet</a></li>
-                <li><a href="#shuttle">Shuttle</a></li>
+                <li><a href="#destinations">Explore</a></li>
+                <li><a href="#fleet">Our Voxy</a></li>
+                <li><a href="#accommodations">Stays</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact" class="nav-btn-link">Book Now</a></li>
+                <li><a href="#booking-section" class="nav-btn-link">Book Now</a></li>
             </ul>
         </div>
     </nav>
@@ -66,9 +55,9 @@
             
             <span class="hero-tag-wide hero-subtag">LUXURY TRAVEL & EXECUTIVE SHUTTLE ACROSS KENYA</span>
             
-            <div class="hero-actions">
-                <a href="#explore" class="btn-text-link">Explore Destinations &rarr;</a>
-                <a href="#contact" class="btn-pill-white">Book Shuttle</a>
+            <div class="hero-actions mt-30">
+                <a href="#destinations" class="btn-text-link">Explore Destinations &rarr;</a>
+                <a href="#booking-section" class="btn-pill-white">Book Shuttle</a>
             </div>
             
             <div class="scroll-indicator">
@@ -99,10 +88,10 @@
     </div>
 
     <!-- Featured Travel Destinations -->
-    <section id="destinations" class="section-padding" style="background: var(--bg-surface);">
+    <section id="destinations" class="section-padding destinations-section">
         <div class="container">
             <div class="section-header reveal-up">
-                <span class="hero-tag" style="margin-bottom: 8px;">EXPLORE KENYA</span>
+                <span class="hero-tag">EXPLORE KENYA</span>
                 <h2 class="serif">Breathtaking Destinations</h2>
                 <p>From the iconic savannas to the pristine coastal shores, travel to Kenya's most sought-after locations in unrivaled luxury.</p>
             </div>
@@ -128,11 +117,11 @@
                             <span>Guided Safari</span>
                         </div>
                         <p class="card-desc">Witness the Greatest Show on Earth — the wildebeest migration across the Mara River. Track the Big Five, sleep under canvas in luxury tented camps, and experience Kenya's most iconic wildlife destination.</p>
-                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                        <button class="safari-details-btn" data-safari="mara">Explore Package &rarr;</button>
                     </div>
                 </div>
                 <!-- Amboseli -->
-                <div class="destination-card reveal-up" style="transition-delay: 0.1s;">
+                <div class="destination-card reveal-up" id="dest-amboseli">
                     <div class="card-image-wrap">
                         <img src="assets/dest-amboseli.png" alt="Amboseli Explorer">
                         <span class="card-overlay-tag">Wildlife & Photography</span>
@@ -151,11 +140,11 @@
                             <span>Guided Safari</span>
                         </div>
                         <p class="card-desc">Kenya's most photogenic park. Elephant herds in the foreground, the snow-capped peak of Kilimanjaro behind — Amboseli delivers breathtaking scenery and intimate wildlife encounters unlike anywhere else.</p>
-                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                        <button class="safari-details-btn" data-safari="amboseli">Explore Package &rarr;</button>
                     </div>
                 </div>
                 <!-- Diani Beach -->
-                <div class="destination-card reveal-up" style="transition-delay: 0.2s;">
+                <div class="destination-card reveal-up" id="dest-diani">
                     <div class="card-image-wrap">
                         <img src="assets/dest-diani.png" alt="Diani Beach Escape">
                         <span class="card-overlay-tag">Beach & Coastal Paradise</span>
@@ -174,12 +163,12 @@
                             <span>Resort & Leisure</span>
                         </div>
                         <p class="card-desc">Powder-white sands, warm turquoise Indian Ocean waters, and swaying palms line Kenya's most beautiful beach. Perfect for couples, families, and anyone seeking sun-soaked coastal paradise relaxation.</p>
-                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                        <button class="safari-details-btn" data-safari="diani">Explore Package &rarr;</button>
                     </div>
                 </div>
                 
                 <!-- Mount Kenya -->
-                <div class="destination-card reveal-up" style="transition-delay: 0.3s;">
+                <div class="destination-card reveal-up" id="dest-mtkenya">
                     <div class="card-image-wrap">
                         <img src="assets/dest-mtkenya.jpg" alt="Mount Kenya Trek">
                         <span class="card-overlay-tag">Adventure & Trekking</span>
@@ -198,12 +187,12 @@
                             <span>Guided Trek</span>
                         </div>
                         <p class="card-desc">Scale Africa's second-highest peak through dramatic moorlands, glacial valleys, and alpine meadows. Whether you summit Point Lenana or explore the forest foothills, Mount Kenya is an adventure of a lifetime.</p>
-                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                        <button class="safari-details-btn" data-safari="mtkenya">Explore Package &rarr;</button>
                     </div>
                 </div>
                 
                 <!-- Lake Nakuru & Flamingos -->
-                <div class="destination-card reveal-up" style="transition-delay: 0.4s;">
+                <div class="destination-card reveal-up" id="dest-nakuru">
                     <div class="card-image-wrap">
                         <img src="assets/dest-nakuru.jpg" alt="Lake Nakuru Flamingos">
                         <span class="card-overlay-tag">Birds & Wildlife</span>
@@ -222,12 +211,12 @@
                             <span>Day Trip Available</span>
                         </div>
                         <p class="card-desc">A flamingo-fringed alkaline lake that turns pink at the horizon. Spot rhinos, lions, and baboons in one of Kenya's most diverse parks, just two hours from Nairobi. The perfect weekend escape.</p>
-                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                        <button class="safari-details-btn" data-safari="nakuru">Explore Package &rarr;</button>
                     </div>
                 </div>
                 
                 <!-- Lamu Island Retreat -->
-                <div class="destination-card reveal-up" style="transition-delay: 0.5s;">
+                <div class="destination-card reveal-up" id="dest-lamu">
                     <div class="card-image-wrap">
                         <img src="assets/dest-lamu.jpg" alt="Lamu Island Retreat">
                         <span class="card-overlay-tag">Heritage & Island Living</span>
@@ -246,15 +235,446 @@
                             <span>Cultural & Leisure</span>
                         </div>
                         <p class="card-desc">Step back in time on this UNESCO World Heritage island. Narrow coral-stone streets, traditional dhow cruises, pristine beaches, and Swahili culture make Lamu Kenya's most enchanting and authentic escape.</p>
-                        <a href="#contact" class="btn-card-outline">Explore Package &rarr;</a>
+                        <button class="safari-details-btn" data-safari="lamu">Explore Package &rarr;</button>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- The Voxy Fleet Showcase -->
+    <section id="fleet" class="section-padding fleet-section-white">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="hero-tag">HYBRID EFFICIENCY</span>
+                <h2 class="serif">The Voxy Comfort Standard</h2>
+                <p>
+                    Experience the pinnacle of hybrid performance and VIP comfort. Our unmarked Voxy fleet offers absolute privacy and zero road noise, allowing you to relax truly.
+                </p>
+            </div>
             
-            <div class="destination-cta reveal-up" style="margin-top: 60px; text-align: center; padding: 40px; background: #FFFFFF; border-radius: var(--radius-lg); border: 1px solid var(--border-glass);">
-                <h3 class="serif" style="font-size: 1.8rem; margin-bottom: 15px;">Looking For A Custom Itinerary?</h3>
-                <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 1.05rem;">Don't see your dream destination? Reach out to us and we'll design a bespoke luxury journey just for you.</p>
-                <a href="#contact" class="btn-pill-white" style="border: 1px solid var(--text-pure); box-shadow: none;">Design Your Journey &rarr;</a>
+            <div class="fleet-gallery-grid">
+                <div class="fleet-image-wrap reveal-up">
+                    <img src="assets/voxy-exterior.png" alt="White Executive Voxy Exterior" class="fleet-image-cover">
+                    <div class="image-label">Exterior Elegance</div>
+                </div>
+                
+                <div class="fleet-image-wrap reveal-up delay-200">
+                    <img src="assets/voxy-interior.jpg" alt="Luxury VIP Captains Chairs Interior" class="fleet-image-cover">
+                    <div class="image-label">Premium VIP Comfort</div>
+                </div>
+            </div>
+
+            <div class="fleet-features grid-4 reveal-up mt-60">
+                <div class="feature-item vertical">
+                    <span class="feature-icon">👑</span>
+                    <div class="feature-text text-center">
+                        <h4 class="serif">VIP Captain's Chairs</h4>
+                        <p>Plush, reclining leather seating designed specifically for ultimate long-distance relaxation.</p>
+                    </div>
+                </div>
+                <div class="feature-item vertical" id="feature-capacity">
+                    <span class="feature-icon">👥</span>
+                    <div class="feature-text text-center">
+                        <h4 class="serif">6-Passenger Capacity</h4>
+                        <p>Spacious luxury cabin comfortably accommodating up to 6 VIP travelers with ample luggage room.</p>
+                    </div>
+                </div>
+                <div class="feature-item vertical" id="feature-silence">
+                    <span class="feature-icon">🤫</span>
+                    <div class="feature-text text-center">
+                        <h4 class="serif">Supreme Cabin Silence</h4>
+                        <p>Our hybrid engine and acoustic glass create a whisper-quiet sanctuary away from the city noise.</p>
+                    </div>
+                </div>
+                <div class="feature-item vertical" id="feature-discrete">
+                    <span class="feature-icon">🛡</span>
+                    <div class="feature-text text-center">
+                        <h4 class="serif">Discrete Luxury</h4>
+                        <p>Unmarked, flawless exteriors offer ultimate privacy and a distinguished, secure arrival.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Accommodations Section -->
+    <section id="accommodations" class="section-padding accommodations-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="hero-tag">PREMIUM STAYS</span>
+                <h2 class="serif">Curated Collections</h2>
+                <p>Beyond travel, we partner with Kenya's most exclusive villas and boutique hotels to ensure your rest is as refined as your journey.</p>
+            </div>
+
+            <div class="accommodations-grid">
+                <!-- Stay 1: Da Azizi -->
+                <div class="stay-card reveal-up" id="stay-da-azizi-card">
+                    <div class="stay-image">
+                        <img src="assets/da-azizi.jpg" alt="Da Azizi Diani">
+                        <div class="stay-price">KSh 25,000<span>/night</span></div>
+                    </div>
+                    <div class="stay-info">
+                        <h3 class="serif">Da Azizi</h3>
+                        <p class="stay-location">Diani Beach, South Coast</p>
+                        <div class="stay-features">
+                            <span>Boutique Design</span>
+                            <span>Tropical Garden</span>
+                            <span>Beach Proximity</span>
+                        </div>
+                        <button class="safari-details-btn" data-safari="da-azizi">More Details &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Stay 2: Shanzu -->
+                <div class="stay-card reveal-up" id="stay-shanzu-card">
+                    <div class="stay-image">
+                        <img src="assets/shanzu-bnb.jpg" alt="Shanzu Luxury Stay Mombasa">
+                        <div class="stay-price">KSh 14,500<span>/night</span></div>
+                    </div>
+                    <div class="stay-info">
+                        <h3 class="serif">Shanzu Luxury Stay</h3>
+                        <p class="stay-location">Shanzu, Mombasa (North Coast)</p>
+                        <div class="stay-features">
+                            <span>Modern Living</span>
+                            <span>Ocean Balcony</span>
+                            <span>Secure Gated</span>
+                        </div>
+                        <button class="safari-details-btn" data-safari="shanzu-bnb">More Details &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Stay 3: Thindigua -->
+                <div class="stay-card reveal-up" id="stay-thindigua-card">
+                    <div class="stay-image">
+                        <img src="assets/MoonThindigua.png" alt="The Moon Thindigua apartments">
+                        <div class="stay-price">KSh 16,500<span>/night</span></div>
+                    </div>
+                    <div class="stay-info">
+                        <h3 class="serif">The Moon Thindigua</h3>
+                        <p class="stay-location">Kiambu Road (Thindigua)</p>
+                        <div class="stay-features">
+                            <span>Corporate Suites</span>
+                            <span>Luxury Living</span>
+                            <span>Fast Wi-Fi & Back-up</span>
+                        </div>
+                        <button class="safari-details-btn" data-safari="moon-thindigua">More Details &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Stay 4: Lymack -->
+                <div class="stay-card reveal-up" id="stay-lymack-card">
+                    <div class="stay-image">
+                        <img src="assets/MoonLymack.png" alt="The Moon Lymack Fourways Junction">
+                        <div class="stay-price">KSh 18,000<span>/night</span></div>
+                    </div>
+                    <div class="stay-info">
+                        <h3 class="serif">The Moon Lymack</h3>
+                        <p class="stay-location">Fourways Junction, Nairobi</p>
+                        <div class="stay-features">
+                            <span>Infinity Pool</span>
+                            <span>Modern Gym</span>
+                            <span>Executive Design</span>
+                        </div>
+                        <button class="safari-details-btn" data-safari="moon-lymack">More Details &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Stay 5: Ruaka -->
+                <div class="stay-card reveal-up" id="stay-ruaka-card">
+                    <div class="stay-image">
+                        <img src="assets/MoonRuaka.png" alt="The Moon Ruaka apartments">
+                        <div class="stay-price">KSh 15,000<span>/night</span></div>
+                    </div>
+                    <div class="stay-info">
+                        <h3 class="serif">The Moon Ruaka</h3>
+                        <p class="stay-location">Ruaka, Nairobi (Near Two Rivers)</p>
+                        <div class="stay-features">
+                            <span>Executive 1-BR</span>
+                            <span>High Security</span>
+                            <span>Modern Finishes</span>
+                        </div>
+                        <button class="safari-details-btn" data-safari="moon-ruaka">More Details &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Booking Section -->
+    <section id="booking-section" class="section-padding booking-section">
+        <div class="container">
+            <div class="booking-wrapper reveal-up">
+                <div class="booking-form-container glass-panel">
+                    <div class="form-header">
+                        <h2 class="serif">Reserve Your Journey</h2>
+                        <p>Tell us your plans and we'll handle the rest.</p>
+                    </div>
+                    
+                    <form id="booking-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+
+                            <!-- Step 1: Transport Selection -->
+                            <div class="form-group form-group-full">
+                                <label for="transport-service" class="step-label"><span class="step-badge">1</span> Choose Your Transport / Safari (Required)</label>
+                                <select id="transport-service" required>
+                                    <option value="" disabled selected>Select Your Vehicle & Journey</option>
+                                    <optgroup label="Adventure Safaris (Voxy Hybrid Included)">
+                                        <option value="mara">Maasai Mara Safari Collection</option>
+                                        <option value="amboseli">Amboseli Elephant Explorer</option>
+                                        <option value="diani-safari">Diani Coastal Safari</option>
+                                        <option value="lamu-tour">Lamu Historic Island Tour</option>
+                                        <option value="mtkenya">Mount Kenya Expedition</option>
+                                        <option value="nakuru">Lake Nakuru Natural Wonders</option>
+                                    </optgroup>
+                                    <optgroup label="Executive Transfers & Shuttles">
+                                        <option value="airport-transfer">JKIA / Wilson Airport Transfer</option>
+                                        <option value="nairobi-shuttle">Nairobi Executive Day Shuttle</option>
+                                        <option value="coastal-link">Mombasa - Diani Link Service</option>
+                                        <option value="other">Other / Custom Journey</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <!-- Step 2: Accommodation Selection -->
+                            <div class="form-group form-group-full">
+                                <label for="accommodation-addon" class="step-label"><span class="step-badge">2</span> Add Luxury Accommodation (Optional Add-on)</label>
+                                <select id="accommodation-addon" disabled title="Please select a transport service first">
+                                    <option value="none" selected>No Accommodation Needed</option>
+                                    <optgroup label="Coastal Boutique Stays">
+                                        <option value="da-azizi">Da Azizi (Diani Beach)</option>
+                                        <option value="shanzu-bnb">Shanzu Luxury Stay (Mombasa)</option>
+                                    </optgroup>
+                                    <optgroup label="Luxury Nairobi Stays (The Moon)">
+                                        <option value="moon-thindigua">The Moon Thindigua</option>
+                                        <option value="moon-lymack">The Moon Lymack (Fourways)</option>
+                                        <option value="moon-ruaka">The Moon Ruaka</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Other Destination Input (Hidden by default) -->
+                        <div id="other-destination-wrap" class="form-group-full mt-15 hidden">
+                            <label for="other-destination">Specify Custom Destination</label>
+                            <input type="text" id="other-destination" name="other-destination" placeholder="Where would you like to travel?">
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="guests">Number of Guests</label>
+                                <input type="number" id="guests" min="1" max="12" value="2">
+                            </div>
+                        </div>
+
+                        <!-- Date Picker Section -->
+                        <div class="date-picker-container">
+                            <label>Selection Dates</label>
+                            <div class="custom-calendar" id="calendar">
+                                <div class="calendar-header">
+                                    <button type="button" id="prev-month">&lsaquo;</button>
+                                    <h4 id="current-month">April 2026</h4>
+                                    <button type="button" id="next-month">&rsaquo;</button>
+                                </div>
+                                <div class="calendar-weekdays">
+                                    <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                                </div>
+                                <div class="calendar-days" id="calendar-days">
+                                    <!-- Days will be generated by JS -->
+                                </div>
+                            </div>
+                            <div class="selected-dates" id="selected-dates-text">
+                                Please select your travel dates on the calendar.
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-20">
+                            <label for="message">Special Requests</label>
+                            <textarea id="message" rows="3" placeholder="Tell us if you need specific accommodation, dietary needs, or child seats..."></textarea>
+                        </div>
+
+                        <!-- Payment Section (Initially Hidden) -->
+                        <div id="payment-section" class="payment-step border-top-glass mt-30 hidden">
+                            <h4 class="serif mb-20">Secure Payment</h4>
+                            <div class="form-grid">
+                                <div class="form-group form-group-full">
+                                    <label>Card Number</label>
+                                    <input type="text" placeholder="0000 0000 0000 0000">
+                                </div>
+                                <div class="form-group">
+                                    <label>Expiry Date</label>
+                                    <input type="text" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label>CVV</label>
+                                    <input type="text" placeholder="123">
+                                </div>
+                            </div>
+                            <p class="font-sm mt-10 text-dim">Your payment is encrypted and secure.</p>
+                        </div>
+
+                        <button type="submit" id="submit-booking" class="btn-primary w-full mt-20">Proceed to Payment</button>
+                    </form>
+                </div>
+
+                <div class="booking-info-sidebar">
+                    <div class="sidebar-item reveal-up">
+                        <span class="icon">💬</span>
+                        <div>
+                            <h4 class="serif">Direct Consultation</h4>
+                            <p>Prefer to speak via WhatsApp? <a href="https://wa.me/254700000000" class="gold-link">Chat with us now &rarr;</a></p>
+                        </div>
+                    </div>
+                    <div class="sidebar-item reveal-up" id="sidebar-safety">
+                        <span class="icon">🛡</span>
+                        <div>
+                            <h4 class="serif">Safety First</h4>
+                            <p>All our drivers are vetted professionals. Our fleet is maintained to the highest safety standards.</p>
+                        </div>
+                    </div>
+                    <div class="sidebar-item reveal-up" id="sidebar-bespoke">
+                        <span class="icon">✨</span>
+                        <div>
+                            <h4 class="serif">Bespoke Options</h4>
+                            <p>From private chefs to luxury villas, we tailor every detail to your preference.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding testimonials-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="hero-tag gold-tag">GUEST EXPERIENCES</span>
+                <h2 class="serif">Voices of Luxury</h2>
+            </div>
+
+            <div class="testimonial-slider" id="testimonial-slider">
+                <div class="testimonial-track" id="testimonial-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon">“</div>
+                        <p class="quote-text">The level of service provided by LIOR is unmatched in Kenya. From the moment we landed at JKIA to our stay in Diani, everything was seamless. The Voxy was spotless and incredibly comfortable.</p>
+                        <div class="quote-author">
+                            <h4 class="serif">Sarah Jenkins</h4>
+                            <span>Business Executive, London</span>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon">“</div>
+                        <p class="quote-text">A truly premium safari experience. Our guide was knowledgeable, and the hybrid Voxy made for a surprisingly quiet and peaceful drive through the Mara. Highly recommended!</p>
+                        <div class="quote-author">
+                            <h4 class="serif">David Chen</h4>
+                            <span>Tech Entrepreneur, Singapore</span>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon">“</div>
+                        <p class="quote-text">The Moon Serenity in Ruaka is a hidden gem. Executive finishes, incredibly secure, and just minutes from Two Rivers. LIOR's concierge service made my business trip effortless.</p>
+                        <div class="quote-author">
+                            <h4 class="serif">Elena Rodriguez</h4>
+                            <span>International Consultant, Madrid</span>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon">“</div>
+                        <p class="quote-text">Our honeymoon in Lamu was perfection, but the transfer with LIOR was the cherry on top. The attention to detail and the 'black-tie' feel of the service is rare to find.</p>
+                        <div class="quote-author">
+                            <h4 class="serif">Marcus & Sophie</h4>
+                            <span>Newlyweds, Berlin</span>
+                        </div>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon">“</div>
+                        <p class="quote-text">Fast, reliable, and extremely professional. The best executive shuttle service in Nairobi, hands down. We use them for all our VIP client transfers.</p>
+                        <div class="quote-author">
+                            <h4 class="serif">Dr. Samuel Omondi</h4>
+                            <span>CEO, Blue Horizon Ventures</span>
+                        </div>
+                    </div>
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon">“</div>
+                        <p class="quote-text">The level of customization we received for our private villa stay in Diani was exceptional. Da Azizi is a masterpiece of design, and LIOR's team made sure every meal and outing was perfect.</p>
+                        <div class="quote-author">
+                            <h4 class="serif">Lord Julian Ashford</h4>
+                            <span>Private Investor, London</span>
+                        </div>
+                    </div>
+                    <!-- Testimonial 7 -->
+                    <div class="testimonial-slide">
+                        <div class="quote-icon">“</div>
+                        <p class="quote-text">Shanzu Luxury Stay was a dream. Waking up to the Indian Ocean breeze and having our premium shuttle waiting downstairs was the height of luxury. LIOR is the only way to travel in Kenya.</p>
+                        <div class="quote-author">
+                            <h4 class="serif">Zanele Mbeki</h4>
+                            <span>Fashion Designer, Cape Town</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-dot active" data-index="0" title="Slide 1"></button>
+                    <button class="slider-dot" data-index="1" title="Slide 2"></button>
+                    <button class="slider-dot" data-index="2" title="Slide 3"></button>
+                    <button class="slider-dot" data-index="3" title="Slide 4"></button>
+                    <button class="slider-dot" data-index="4" title="Slide 5"></button>
+                    <button class="slider-dot" data-index="5" title="Slide 6"></button>
+                    <button class="slider-dot" data-index="6" title="Slide 7"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="hero-tag">COMMON QUESTIONS</span>
+                <h2 class="serif">Clarifying Your Journey</h2>
+            </div>
+
+            <div class="faq-container reveal-up">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How many passengers can fit the Voxy?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our executive Voxy fleet is optimized for 6 passengers with luggage, though it can fit more if needed for shorter city transfers. For maximum safari comfort, we recommend 4-5 adults.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you provide airport meet-and-greet?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, all airport transfers include a professional meet-and-greet service. Our driver will be waiting at the arrival terminal with a personalized signage board.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I book a custom multi-day itinerary?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We specialize in bespoke journeys. Simply fill out the booking form or message us on WhatsApp with your desired destinations, and we'll draft a complete itinerary for you.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -263,7 +683,7 @@
     <section id="explore" class="section-padding">
         <div class="container">
             <div class="section-header reveal-up">
-                <span class="hero-tag" style="margin-bottom: 8px;">THE LIOR STANDARD</span>
+                <span class="hero-tag">THE LIOR STANDARD</span>
                 <h2 class="serif">Crafting Perfect Journeys</h2>
                 <p>We believe every mile should be enjoyed, not just endured. Whether it's an airport transfer or a multi-day safari, we ensure excellence.</p>
             </div>
@@ -276,13 +696,13 @@
                     <p>Access absolute wilderness without compromising on luxury. Our vetted guides navigate the terrain while you relax in our custom hybrid fleet.</p>
                 </div>
                 <!-- Service Card 2 -->
-                <div class="glass-panel service-card reveal-up" style="transition-delay: 0.1s;">
+                <div class="glass-panel service-card reveal-up" id="service-transfer">
                     <div class="service-icon">✈</div>
                     <h3 class="serif">Executive Transfer</h3>
                     <p>Reliable, punctual shuttles to and from JKIA. Step off your flight and straight into a serene, air-conditioned cabin that feels like an executive lounge.</p>
                 </div>
                 <!-- Service Card 3 -->
-                <div class="glass-panel service-card reveal-up" style="transition-delay: 0.2s;">
+                <div class="glass-panel service-card reveal-up" id="service-corporate">
                     <div class="service-icon">❖</div>
                     <h3 class="serif">Corporate Transport</h3>
                     <p>First impressions matter. We handle group logistics, VIP transport, and multiday corporate retreats with unmatched professionalism.</p>
@@ -291,63 +711,8 @@
         </div>
     </section>
 
-    <!-- The Voxy Fleet Showcase -->
-    <section id="fleet" class="section-padding" style="background: #FFFFFF; position: relative; overflow: hidden;">
-        <div class="container">
-            <div class="section-header reveal-up">
-                <span class="hero-tag">HYBRID EFFICIENCY</span>
-                <h2 class="serif" style="font-size: 2.8rem;">The Voxy Comfort Standard</h2>
-                <p style="color: var(--text-muted); max-width: 600px; margin: 15px auto 0;">
-                    Experience the pinnacle of hybrid performance and VIP comfort. Our unmarked Voxy fleet offers absolute privacy and zero road noise, allowing you to relax truly.
-                </p>
-            </div>
-            
-            <div class="fleet-gallery-grid">
-                <div class="fleet-image-wrap reveal-up">
-                    <img src="assets/voxy-exterior.png" alt="White Executive Voxy Exterior" style="object-fit: cover; height: 100%; aspect-ratio: 4/3;">
-                    <div class="image-label">Exterior Elegance</div>
-                </div>
-                
-                <div class="fleet-image-wrap reveal-up" style="transition-delay: 0.2s;">
-                    <img src="assets/voxy-interior.jpg" alt="Luxury VIP Captains Chairs Interior" style="object-fit: cover; height: 100%; aspect-ratio: 4/3;">
-                    <div class="image-label">Premium VIP Comfort</div>
-                </div>
-            </div>
 
-            <div class="fleet-features grid-4 reveal-up" style="margin-top: 60px;">
-                <div class="feature-item vertical">
-                    <span class="feature-icon">👑</span>
-                    <div class="feature-text text-center">
-                        <h4 class="serif">VIP Captain's Chairs</h4>
-                        <p>Plush, reclining leather seating designed specifically for ultimate long-distance relaxation.</p>
-                    </div>
-                </div>
-                <div class="feature-item vertical" style="transition-delay: 0.1s;">
-                    <span class="feature-icon">👥</span>
-                    <div class="feature-text text-center">
-                        <h4 class="serif">6-Passenger Capacity</h4>
-                        <p>Spacious luxury cabin comfortably accommodating up to 6 VIP travelers with ample luggage room.</p>
-                    </div>
-                </div>
-                <div class="feature-item vertical" style="transition-delay: 0.2s;">
-                    <span class="feature-icon">🤫</span>
-                    <div class="feature-text text-center">
-                        <h4 class="serif">Supreme Cabin Silence</h4>
-                        <p>Our hybrid engine and acoustic glass create a whisper-quiet sanctuary away from the city noise.</p>
-                    </div>
-                </div>
-                <div class="feature-item vertical" style="transition-delay: 0.3s;">
-                    <span class="feature-icon">🛡</span>
-                    <div class="feature-text text-center">
-                        <h4 class="serif">Discrete Luxury</h4>
-                        <p>Unmarked, flawless exteriors offer ultimate privacy and a distinguished, secure arrival.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dark Mode CTA -->
+    <!-- Why Choose Lior - Dark Mode CTA -->
     <section id="contact" class="cta-section">
         <div class="cta-bg"></div>
         <div class="container reveal-up">
@@ -361,15 +726,30 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="logo" style="justify-content: center; margin-bottom: 24px;">
+    <footer class="text-center">
+        <div class="container container-content">
+            <div class="footer-logo mb-24">
                 <span class="logo-icon">✥</span>
-                <span class="logo-text">LIOR COMFORT</span>
+                <span class="logo-text font-bold">LIOR COMFORT</span>
             </div>
             <p>&copy; 2026 LIOR Kenya. Redefining Corporate Safari. 🇰🇪</p>
+            <div class="social-links mt-20 flex-center">
+                <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">LN</a>
+                <a href="#" class="social-icon" aria-label="Twitter">TW</a>
+            </div>
         </div>
     </footer>
+
+    <!-- Safari Details Modal -->
+    <div id="safari-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+                <!-- Content will be injected by JS -->
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
